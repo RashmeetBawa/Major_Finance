@@ -11,7 +11,7 @@ function App() {
       <div className="app">
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          hi
+          hello world
         </ThemeProvider>
       </div>
     </>
