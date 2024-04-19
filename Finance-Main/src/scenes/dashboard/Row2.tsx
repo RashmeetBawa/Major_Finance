@@ -1,7 +1,7 @@
-import DashboardBox from '@/components/DashboardBox'
-import React from 'react'
+import DashboardBox from "@/components/DashboardBox";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const Row2 = (props: Props) => {
     return (
@@ -10,7 +10,7 @@ const Row2 = (props: Props) => {
         <DashboardBox gridArea = "e"></DashboardBox>
         <DashboardBox gridArea = "f"></DashboardBox>
         </>
-    )
-}
+    );
+};
 
-export default Row2
+export default Row2;
