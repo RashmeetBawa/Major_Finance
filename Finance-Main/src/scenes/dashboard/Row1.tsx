@@ -20,12 +20,27 @@ import {
   Rectangle,
 } from "recharts";
 
-type Props ={};
+//type Props ={};
 
-const Row1 = (props: Props) => {
+const Row1 = () => {
   const { palette } = useTheme();
   const { data } = useGetKpisQuery();
-  console.log("data:",data);
+
+ // console.log("data:",data);
+
+ const revenue = useMemo(() => {
+  return (
+    data &&
+    data[0].monthlyData.map(({ month, revenue }) => {
+      return {
+        name: month.substring(0, 3),
+        revenue: revenue,
+      };
+    })
+  );
+
+}, [data]);
+
   const revenueExpenses = useMemo(() => {
     return (
       data &&
@@ -34,7 +49,7 @@ const Row1 = (props: Props) => {
           name: month.substring(0, 3),
           revenue: revenue,
           expenses: expenses,
-        }
+        };
       })
     );
 
@@ -48,24 +63,12 @@ const Row1 = (props: Props) => {
           name: month.substring(0, 3),
           revenue: revenue,
           profit: revenue-expenses,
-        }
+        };
       })
     );
 
   }, [data]);
 
-  const revenue = useMemo(() => {
-    return (
-      data &&
-      data[0].monthlyData.map(({ month, revenue }) => {
-        return {
-          name: month.substring(0, 3),
-          revenue: revenue,
-        }
-      })
-    );
-
-  }, [data]);
 
   return (
     <>

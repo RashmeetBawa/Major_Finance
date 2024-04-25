@@ -34,7 +34,7 @@ const monthSchema = new Schema(
             currency: "USD",
             get: (v) => v / 100
         },
-        operationalExepenses:{
+        operationalExpenses:{
             type: mongoose.Types.Currency,
             currency: "USD",
             get: (v) => v / 100
