@@ -1,26 +1,26 @@
-export interface ExpensesByCategory{
+export interface ExpensesByCategory {
     salaries: number;
     supplies: number;
     services: number;
-}
-
-export interface Month{
+  }
+  
+  export interface Month {
     id: string;
     month: string;
     revenue: number;
     expenses: number;
     nonOperationalExpenses: number;
     operationalExpenses: number;
-}
-
-export interface Day{
+  }
+  
+  export interface Day {
     id: string;
     date: string;
     revenue: number;
     expenses: number;
-}
-
-export interface GetKpisResponse {
+  }
+  
+  export interface GetKpisResponse {
     id: string;
     _id: string;
     __v: number;
@@ -32,9 +32,9 @@ export interface GetKpisResponse {
     dailyData: Array<Day>;
     createdAt: string;
     updatedAt: string;
-}
-
-export interface GetProductsResponse {
+  }
+  
+  export interface GetProductsResponse {
     id: string;
     _id: string;
     __v: number;
@@ -43,4 +43,15 @@ export interface GetProductsResponse {
     transactions: Array<string>;
     createdAt: string;
     updatedAt: string;
-}
+  }
+  
+  export interface GetTransactionsResponse {
+    id: string;
+    _id: string;
+    __v: number;
+    buyer: string;
+    amount: number;
+    productIds: Array<string>;
+    createdAt: string;
+    updatedAt: string;
+  }
