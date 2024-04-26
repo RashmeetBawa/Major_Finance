@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import {loadType} from "mongoose-currency";
 
 const Schema = mongoose.Schema;
@@ -34,7 +34,7 @@ const monthSchema = new Schema(
             currency: "USD",
             get: (v) => v / 100
         },
-        operationalExepenses:{
+        operationalExpenses:{
             type: mongoose.Types.Currency,
             currency: "USD",
             get: (v) => v / 100
